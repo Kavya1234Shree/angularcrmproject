@@ -1,0 +1,54 @@
+
+<div class="container"
+fxLayout
+fxLayout.xs="column"
+fxLayoutAlign="center"
+fxLayoutGap="10px"
+fxLayoutGap.xs="0" style="background-color: white;">
+
+<div class="container">
+       
+<table id="customers">
+  <col width="130">
+<thead>
+ <tr>
+   <th>SL.NO</th>
+   <th>GST/TAX</th>
+   <th>Person Name</th>
+   <th>Company</th>
+   <th >Address</th>
+   <th>City</th> 
+   <th>State</th>
+   <th>Country</th>
+   <th>Contact</th>
+   <th>Fax/office</th>
+    <th>Action</th> 
+   
+</thead>
+    <tr *ngFor="let driver of supplier ;let i = index;">
+      <td >{{i+1}}</td>
+      <td >{{driver.txtaddress}}</td>
+      <td >{{driver.txtaddress}}</td>
+      <td >{{driver.txtaddress}}</td>
+      <td >{{driver.txtaddress}}</td>
+      <td >{{driver.txtaddress}}</td>
+      <td >{{driver.txtaddress}}</td>
+      <td >{{driver.txtaddress}}</td>
+      <td >{{driver.txtaddress}}</td>
+      <td >{{driver.txtaddress}}</td>
+      
+     
+      <!-- <td>{{driver.bank_name}}</td>
+      <td>{{driver.customer_name}}</td>
+      <td *ngIf="isAdmin">{{driver.customer_phone}}</td>
+      <td>{{driver.comments}}</td> -->
+       <td>
+        <button mat-raised-button style="background-color:darkcyan; color:white;" (click)="openModal(driver)">EDIT</button>
+     </td> 
+     </tr>
+  </table>
+  <!-- <div>
+    <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+  </div> -->
+  </div>
+  </div>

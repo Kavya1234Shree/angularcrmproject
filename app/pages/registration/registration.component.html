@@ -1,0 +1,153 @@
+<!-- <div class="col-md-8">
+  <div class="card card-user">
+    <div class="card-header">
+      <h5 class="card-title">Register</h5>
+    </div>
+<div class="card-body">
+  <form [formGroup]="form" (ngSubmit)="submitForm()">
+      
+    
+
+      <div class="form-group input-group-lg">
+          <input class="form-control" placeholder="Name" formControlName="vendor_name">
+      </div>
+
+       <div class="form-group input-group-lg">
+          <input class="form-control" placeholder="Company Email" formControlName="company_email">
+      </div>
+
+      <div class="form-group input-group-lg">
+          <input class="form-control" placeholder="Company Name" formControlName="company_name">
+      </div> 
+
+      <div class="form-group input-group-lg">
+          <input class="form-control" placeholder="Phone" formControlName="phone">
+      </div>
+      <div class="row">
+        <div class="col-md-2 pr-1">
+    <div class="form-group" >
+        <label style="color: black;font-family: Georgia, 'Times New Roman', Times, serif;" >Address</label>
+       <br>
+        <input class="form-control" placeholder="Address1" formControlName="address1">
+      </div>
+    </div>
+    <div class="col-md-2 pr-1">
+      <div class="form-group">
+          <label></label>
+          <input  class="form-control" placeholder="City"  formControlName="city">
+        </div>
+    </div>
+    <div class="col-md-2 pr-1">
+        <div class="form-group">
+            <label></label>
+            <input  class="form-control" placeholder="State"  formControlName="state">
+          </div>
+    </div>
+    <div class="col-md-2 pr-1">
+          <div class="form-group">
+            <label></label>
+              <input  class="form-control" placeholder="Zip"  formControlName="zip">
+            </div>
+            </div>
+</div> 
+            
+<div class="mb-3">
+  <select class="custom-select" (change)="changeCompany($event)" formControlName="type_of_company">
+     <option value="">Choose Company Type</option>
+     <option *ngFor="let company of Company" [ngValue]="company">{{company}}</option>
+  </select>
+</div>
+             <div class="form-group input-group-lg">
+                  <input class="form-control" placeholder="GSTN" formControlName="GSTN">
+              </div>
+
+              <div class="form-group" >
+                  <label style="color: black;font-family: Georgia, 'Times New Roman', Times, serif;">GST_certificate:</label>
+                  <input type="file" (change)="uploadFile($event)">
+              </div>
+       
+              <div class="row">
+                 
+                  <div class="col-md-2 pr-1">
+                      <label style="color: black;font-family: Georgia, 'Times New Roman', Times, serif;">Bank Details</label>
+              <div class="form-group">
+                  <input  class="form-control " placeholder="Account Number" formControlName="account_no">
+                </div>
+              </div>
+              <div class="col-md-2 pr-1">
+                <div class="form-group">
+                    <label></label>
+                    <input  class="form-control " placeholder="IFSC Code" formControlName="IFSC_code">
+                  </div>
+              </div>
+             
+              <div class="col-md-2 pr-1">
+                  
+                <select class="custom-select 3" (change)="changeAccount($event)" formControlName="type_of_account">
+                     <option value="">Choose Account Type</option>
+                     <option *ngFor="let account of Account" [ngValue]="account">{{account}}</option>
+                  </select>
+                
+              </div>
+        </div> 
+         <div class="row">
+            <div class="col-md-2 pr-1">
+        <div class="form-group">
+            <label style="color: black;font-family: Georgia, 'Times New Roman', Times, serif;">Escalation Matrices</label>
+            <input  class="form-control" placeholder="Level1 Contact" formControlName="level1_contact">
+          </div>
+        </div>
+        <div class="col-md-2 pr-1">
+          <div class="form-group">
+              <label></label>
+              <input  class="form-control" placeholder="Level2 Contact" formControlName="level2_contact">
+            </div>
+        </div>
+        <div class="col-md-2 pr-1">
+            <div class="form-group">
+                <label></label>
+                <input  class="form-control" placeholder="Level3 Contact" formControlName="level3_contact">
+              </div>
+        </div>
+  </div> 
+      <div class="form-group">
+          <button class="btn btn-primary btn-round">Upload</button>
+      </div>
+  </form>
+</div>
+</div>
+</div> -->
+<div class="container"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="10px"
+     fxLayoutGap.xs="0" style="background-color: white;">
+
+<div class="container">
+            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Vendor Name</th>
+        <th>Phone</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vendor of vendor_registration">
+        <td>{{vendor.vendor_uuid}}</td>
+        <td>{{vendor.vendor_name}}</td>
+        <td>{{vendor.phone}}</td>
+        <td>
+          <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+          <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+          <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+      </td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+</div>
